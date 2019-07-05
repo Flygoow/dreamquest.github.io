@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
-    <head>
+<head>
     <title>DREAMQUEST</title>
     <meta charset="UTF-8">
     <meta property="og:type" content="website">
@@ -9,10 +9,74 @@
     <link rel="shortcut icon" href="SALUT.ico"/>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="preload.js">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+    <script>
+            function changeImage() {
+            if (document.getElementById("night").src == "images/Nightmode.gif") {
+            document.getElementById("night").src = "images/Lightmode.gif";}
+            else {
+            document.getElementById("night").src = "images/Nightmode.gif";}}
+            $("#night").click(function () {
+            $("html").toggleClass("inversed");
+            });
+            </script>
+
+<span style="display:block !important;">
+    <a href="#"><img id="night" onclick=changeImage() src="images/Nightmode.gif" class="left"></a>
+</span>
 </head>
 
 <header>
-
+    <a href=""><img id="logo" src="images/dreamquest-titlescreen.png" alt="logo-w" class="center"></a>
 </header>
+
+<body>
+<div id="selection">
+    <p id="consigne">choisissez un personnage</p>
+    <a id="alex"><img id="alex" src="images/CharAlex.gif"></a>
+    <a id="dj"><img id="dj" src="images/CharDJ.gif"></a>
+    <a id="nathan"><img id="nathan" src="images/CharNathan.gif"></a>
+</div>
+
+<script>
+    $('#nathan').on('click',function(){
+    if($('#selection').css('display')!='none'){
+    $('#nathan1').html($('#static').html()).show().siblings('div').hide();
+    }else if($('#nathan1').css('display')!='none'){
+        $('#selection').show().siblings('div').hide();
+    }
+});
+
+$('#dj').on('click',function(){
+    if($('#selection').css('display')!='none'){
+    $('#dj1').html($('#static').html()).show().siblings('div').hide();
+    }else if($('#dj1').css('display')!='none'){
+        $('#selection').show().siblings('div').hide();
+    }
+});
+
+$('#alex').on('click',function(){
+    if($('#selection').css('display')!='none'){
+    $('#alex1').html($('#static').html()).show().siblings('div').hide();
+    }else if($('#alex1').css('display')!='none'){
+        $('#selection').show().siblings('div').hide();
+    }
+});
+</script>
+
+<div id="nathan1" style="display:none">
+    <img src="images/nathan/00001.gif"class="center"></img>
+</div>
+
+<div id="dj1" style="display:none">
+    <img src="images/dj/D1.gif"class="center"></img>
+</div>
+
+<div id="alex1" style="display:none">
+    <img src="images/alex/A1.gif" class="center"></img>
+</div>
+
+</body>
+
 </html>

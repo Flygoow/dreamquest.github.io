@@ -1,0 +1,83 @@
+html, body {
+    background: white;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+#night{
+    display: block;
+    margin-left: 0px;
+}
+
+body {
+    padding: 1em;
+  }
+
+#logo{
+    display: block;
+    margin: auto;
+    max-width: 100%;
+    height: auto;
+    padding: 20px;
+    margin-top: -100px;
+}
+
+#selection{
+    display: block;
+    margin: auto;
+    max-width: 100%;
+    height: auto;
+    text-align:center;
+}
+
+div{
+    transition:2px;
+}
+
+#consigne{
+    display: block;
+    margin: auto;
+    max-width: 100%;
+    height: auto;
+    text-align:center;
+    font-family: arial;
+    font-size: 20px;
+    padding: 20px;
+}
+
+button{
+    border: none;
+    background-color: inherit;
+    padding: 14px 28px;
+    font-size: 16px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+img{
+    margin: auto;
+    max-width: 100%;
+    height: auto;
+    padding: 20px;
+    display: block;
+}
+
+#alex, #nathan, #dj{
+    display: initial !important;
+    cursor: crosshair;
+    transition: transform .2s steps(5);
+}
+
+#alex:hover, #nathan:hover, #dj:hover  {
+    -ms-transform: scale(1.1); /* IE 9 */
+    -webkit-transform: scale(1.1); /* Safari 3-8 */
+    transform: scale(1.1); 
+  }
+
+.inversed {
+    transition:2s;
+    -webkit-filter: invert(100%);
+    filter: invert(100%);
+  }
